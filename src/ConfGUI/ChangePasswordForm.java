@@ -55,10 +55,10 @@ public class ChangePasswordForm extends Form {
             String newPass = new String(newPassField.getPassword());
 
             if (DataBase.changePassword(user, newPass)) {
-                JOptionPane.showMessageDialog(this, "Contraseña cambiada con éxito");
+                JOptionPane.showMessageDialog(this, "Password successfully changed");
                 dispose();
             } else {
-                JOptionPane.showMessageDialog(this, "Error al cambiar la contraseña");
+                JOptionPane.showMessageDialog(this, "Error changing password");
             }
         });
 

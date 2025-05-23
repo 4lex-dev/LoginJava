@@ -113,7 +113,7 @@ public class LoginForm extends Form{
         add(registrolabel);
 
 // Enlace a cambio de contraseña
-        JLabel changePassLabel = new JLabel("¿Olvidaste tu contraseña?");
+        JLabel changePassLabel = new JLabel("¿Forgot your password?");
         changePassLabel.setBounds(125, 610, 250, 30);
         changePassLabel.setHorizontalAlignment(SwingConstants.CENTER);
         changePassLabel.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));

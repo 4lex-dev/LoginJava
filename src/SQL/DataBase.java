@@ -30,6 +30,18 @@ public static boolean register(String username,String password){
    }
 return false;
 }
+    public static void deleteUser(String username) {
+        try (Connection connection = DriverManager.getConnection(Components.DB_URL, Components.DB_USERNAME, Components.DB_PASSWORD)) {
+            PreparedStatement delete = connection.prepareStatement(
+                    "DELETE FROM " + Components.DB_USERS_TABLE_NAME + " WHERE username = ?"
+            );
+            delete.setString(1, username);
+            delete.executeUpdate();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
 public static boolean checkUser(String username){
     try{
         //Se conecta a la base de datos usando la URL, usuario y contraseña
